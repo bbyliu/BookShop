@@ -1,0 +1,41 @@
+﻿<Window x:Class="BookShop.Customer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookShop"
+        mc:Ignorable="d"  Background="#A6A2A1"
+        Title="Customer" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="back" Grid.Row="3" Content="←" FontSize="30"  Foreground="#725A7A"  Background="#C6CBD1" 
+                Width="50" Height="50" Margin="0,0,120,0" Click="back_Click"/>
+        <TextBlock Text="Выберите жедаемый товар и добавьте его в корзину"  FontSize="16" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#C6CBD1"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <DataGrid x:Name="Byu" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,10,0" Background="#A6A2A1" BorderBrush="#A6A2A1" />
+
+        <TextBox Grid.Column="3" Margin="0,30,0,0" Width="150" Height="40" MaxLength="25" x:Name="NameTbx"/>
+        <ComboBox Grid.Column="3"  Grid.RowSpan="2" Margin="0,10,0,0" Width="150" Height="40" x:Name="AutTxt" SelectionChanged="AutTxt_SelectionChanged"/>
+        <ComboBox Grid.Column="3" Margin="0,0,0,10"   Grid.Row="1" Width="150" Height="40"  x:Name="PubTxt" SelectionChanged="PubTxt_SelectionChanged"/>
+        <TextBox Grid.Column="3" Margin="0,70,0,0" Grid.Row="1" Width="150" Height="40" MaxLength="4" x:Name="yearTxt"/>
+        <ComboBox Grid.Column="3" Margin="0,50,0,0"  Grid.RowSpan="2" Grid.Row="1" Width="150" Height="40" x:Name="GenTxt" SelectionChanged="GenTxt_SelectionChanged"/>
+        <TextBox Grid.Column="3" Margin="0,15,0,0"  MaxLength="4" Grid.Row="2" Width="150" Height="40" x:Name="PagesTxt"/>
+        <TextBox Grid.Column="3" Margin="0,0,0,10" MaxLength="4" Grid.RowSpan="2"  Grid.Row="2" Width="150" Height="40" x:Name="PriceTxt"/>
+        <ComboBox Grid.Column="3" Margin="0,80,0,0"  Grid.Row="2" Grid.RowSpan="2" Width="150" Height="40" x:Name="PromTxt" SelectionChanged="PromTxt_SelectionChanged"/>
+
+        <Button Grid.Row="2" Height="50" Content="Добавить в коризину"  Foreground="#725A7A"  Background="#C6CBD1" Click="Button_Click"/>
+    </Grid>
+</Window>

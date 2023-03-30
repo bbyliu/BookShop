@@ -1,0 +1,31 @@
+﻿<Window x:Class="BookShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookShop"
+        mc:Ignorable="d" Background="#A6A2A1"
+        Title="MainWindow" Height="300" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="WELCOME!" Grid.Column="1" FontSize="30" Foreground="#C6CBD1"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox MaxLength="15" x:Name="LoginTbx" Grid.Column="1" Grid.Row="1" Width="150" Height="40" 
+                 ToolTip="Логин" Background="#725A7A" PreviewTextInput="LoginTbx_PreviewTextInput" />
+        <PasswordBox MaxLength="15" x:Name="PasswotdTbx"  Grid.Column="1" Background="#725A7A" ToolTip="Пароль" Grid.Row="2"
+                      Width="150" Height="40" PreviewTextInput="PasswotdTbx_PreviewTextInput" />
+        <Button x:Name="Avtoriz" Grid.Column="1" Grid.Row="3" 
+                Width="150" Height="40"  Foreground="#725A7A" Content="LOG IN"
+                Background="#C6CBD1" Click="Avtoriz_Click" />
+    </Grid>
+</Window>
